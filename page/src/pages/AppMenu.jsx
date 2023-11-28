@@ -20,7 +20,7 @@ function AppMenu() {
         menus && menus.length > 0 ?
         (
           <ul
-            className="flex-auto overflow-y-auto list-none p-10 m-0"
+            className="flex-auto overflow-y-auto list-none p-2 m-0"
             theme="dark"
             mode="inline"
             items={menus}
@@ -28,7 +28,7 @@ function AppMenu() {
             {
               menus.map((menu) => {
                 return (
-                  <li className="h-10 leading-10 px-8" key={menu.key}>{ menu.label }</li>
+                  <li className="h-10 leading-10 px-2" key={menu.key}>{ menu.label }</li>
                 );
               })
             }
