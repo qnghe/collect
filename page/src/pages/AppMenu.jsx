@@ -28,7 +28,7 @@ function AppMenu() {
             {
               menus.map((menu) => {
                 return (
-                  <li className="h-10 leading-10 px-2" key={menu.key}>{ menu.label }</li>
+                  <li className="h-10 leading-10 px-2 cursor-pointer hover:text-cyan-600 dark:hover:text-gray-100" key={menu.key}>{ menu.label }</li>
                 );
               })
             }
