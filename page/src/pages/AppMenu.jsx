@@ -21,14 +21,12 @@ function AppMenu() {
         (
           <ul
             className="flex-auto overflow-y-auto list-none p-2 m-0"
-            theme="dark"
             mode="inline"
-            items={menus}
           >
             {
               menus.map((menu) => {
                 return (
-                  <li className="h-10 leading-10 px-2 cursor-pointer hover:text-cyan-600 dark:hover:text-gray-100" key={menu.key}>{ menu.label }</li>
+                  <li className="h-10 leading-10 px-2 cursor-pointer hover:text-cyan-400 dark:hover:text-gray-100" key={menu.key}>{ menu.label }</li>
                 );
               })
             }

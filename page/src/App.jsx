@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import AppMenu from './pages/AppMenu';
 import DarkMode from './components/DarkMode';
