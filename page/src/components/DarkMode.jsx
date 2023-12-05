@@ -1,16 +1,37 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+
+function storeDarkMode(darkMode) {
+  if (darkMode) {
+    window.localStorage.setItem('darkMode', darkMode);
+  } else {
+    window.localStorage.removeItem('darkMode');
+  }
+}
+function getDarkMode() {
+  return window.localStorage.getItem('darkMode');
+}
+
+function changeHTMLClass(darkMode) {
+  const rootEl = document.querySelector('html');
+  if (darkMode) {
+    rootEl.classList.add('dark');
+  } else {
+    rootEl.classList.remove('dark');
+  }
+}
 
 function DarkMode() {
-  const [mode, setMode] = useState('');
+  const [darkMode, setDarkMode] = useState(getDarkMode);
 
-  useEffect(() => {
-    window.localStorage.setItem('mode', mode);
-  }, [mode]);
+  useLayoutEffect(() => {
+    storeDarkMode(darkMode);
+    changeHTMLClass(darkMode);
+  }, [darkMode]);
 
   return (
-    <div className="fixed right-8 bottom-12">
-      <div className="cursor-pointer hover:text-cyan-400" onClick={() => setMode('dark')}>dark</div>
-      <div className="cursor-pointer hover:text-cyan-400" onClick={() => setMode('')}>light</div>
+    <div className="fixed right-10 bottom-20">
+      <div className="cursor-pointer hover:text-primary" onClick={() => setDarkMode(true)}>dark</div>
+      <div className="cursor-pointer hover:text-primary" onClick={() => setDarkMode(false)}>light</div>
       <div></div>
     </div>
   );
