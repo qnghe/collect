@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 function AppMenu() {
   const [menus, setMenus] = useState([]);
+  const [activeMenu, setActiveMenu] = useState({});
 
   useEffect(() => {
     setTimeout(() => {
@@ -14,19 +15,32 @@ function AppMenu() {
       ]);
     }, 100);
   }, []);
+
+  const selectMenu = (menu) => {
+    setActiveMenu(menu);
+  };
+
   return (
     <>
       {
         menus && menus.length > 0 ?
         (
           <ul
-            className="flex-auto overflow-y-auto list-none p-2 m-0"
+            className="flex-auto overflow-y-auto list-none p-0 m-0"
             mode="inline"
           >
             {
               menus.map((menu) => {
                 return (
-                  <li className="h-10 leading-10 px-2 cursor-pointer hover:text-cyan-400 dark:hover:text-gray-100" key={menu.key}>{ menu.label }</li>
+                  <li
+                    className="h-10 leading-10 rounded cursor-pointer hover:text-primary hover:bg-cyan-50/50 dark:hover:text-gray-100"
+                    key={menu.key}
+                    onClick={() => selectMenu(menu)}
+                  >
+                    <div className={activeMenu.key === menu.key ? 'relative px-4 text-primary bg-cyan-50/50 before:content-[""] before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-cyan-600' : 'px-4 '}>
+                      { menu.label }
+                    </div>
+                  </li>
                 );
               })
             }

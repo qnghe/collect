@@ -1,13 +1,16 @@
 import './App.css';
 import AppMenu from './pages/AppMenu';
 import DarkMode from './components/DarkMode';
+import Logo from './components/Logo';
 
 function App() {
   return (
     <div className="h-screen text-base">
       <div className="flex h-screen dark:bg-black dark:text-white">
-        <nav className="flex flex-col flex-none p-4 w-[250px] h-full overflow-y-auto">
-          <div className="flex-none text-center text-xl">logo</div>
+        <nav className="flex flex-col flex-none px-4 py-2 w-[250px] h-full overflow-y-auto border-0 border-r border-r-common border-solid">
+          <div className="flex-none text-center text-xl text-primary">
+            <Logo size='100' />
+          </div>
           <AppMenu />
         </nav>
         <main className="flex-auto p-4">

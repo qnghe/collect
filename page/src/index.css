@@ -19,7 +19,8 @@
 
   --text-color: #1f2328;
   --bg-color: #fff;
-  --color-primary: 32 211 238;
+  --color-primary: 6 182 212;
+  --border-color-default: 208 215 222;
 
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -80,4 +81,9 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   } */
+}
+
+
+@layer components {
+  
 }

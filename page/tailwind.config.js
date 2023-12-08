@@ -9,6 +9,9 @@ export default {
     extend: {
       textColor: {
         primary: "rgb(var(--color-primary) / <alpha-value>)"
+      },
+      borderColor: {
+        common: "rgb(var(--border-color-default) / <alpha-value>)"
       }
     },
   },
