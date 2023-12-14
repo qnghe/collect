@@ -29,7 +29,7 @@ function DarkMode() {
   }, [darkMode]);
 
   return (
-    <div className="fixed right-10 bottom-20">
+    <div>
       <div className="cursor-pointer hover:text-primary" onClick={() => setDarkMode(true)}>dark</div>
       <div className="cursor-pointer hover:text-primary" onClick={() => setDarkMode(false)}>light</div>
       <div></div>

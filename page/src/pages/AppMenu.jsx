@@ -9,9 +9,9 @@ function AppMenu() {
   useEffect(() => {
     setTimeout(() => {
       setMenus([
-        {key: '1', label: 'nav1', icon: <CarOutlined />},
-        {key: '2', label: 'nav2', icon: <CarOutlined />},
-        {key: '3', label: 'nav3', icon: <CarOutlined />}
+        {id: '', key: '1', label: '电影', tags: [], icon: <CarOutlined />},
+        {id: '', key: '2', label: '电视剧', tags: [], icon: <CarOutlined />},
+        {id: '', key: '3', label: '音乐', tags: [], icon: <CarOutlined />},
       ]);
     }, 100);
   }, []);

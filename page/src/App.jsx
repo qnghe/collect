@@ -1,6 +1,6 @@
 import './App.css';
 import AppMenu from './pages/AppMenu';
-import DarkMode from './components/DarkMode';
+import FloatTool from './components/FloatTool';
 import Logo from './components/Logo';
 
 function App() {
@@ -13,11 +13,9 @@ function App() {
           </div>
           <AppMenu />
         </nav>
-        <main className="flex-auto p-4">
-          content
-        </main>
+        <main className="flex-auto p-4"></main>
       </div>
-      <DarkMode />
+      <FloatTool />
     </div>
   )
 }
