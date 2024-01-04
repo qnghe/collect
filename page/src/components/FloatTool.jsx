@@ -1,6 +1,19 @@
+import { createElement, lazy } from "react";
 import DarkMode from './DarkMode';
 
-function FloatTool() {
+const DialogComponent = lazy(() => import('./Dialog'));
+const CategoriesComponent = lazy(() => import('./Categories'));
+
+const createCategories = () => {
+  createElement(DialogComponent, {}, [CategoriesComponent]);
+
+}
+
+const FloatTool = () => {
+  
+  const showCategory = () => {
+    createCategories
+  };
   return (
     <aside className="fixed right-10 bottom-20">
       <div

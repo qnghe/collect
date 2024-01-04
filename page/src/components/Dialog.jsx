@@ -1,5 +1,5 @@
 const Dialog = ({ children }) => {
-  let zIndex = 2000;
+  let zIndex = window.popperZIndex++;
   return (
     <div className="fixed top-0 left-0 w-full h-full" style={{zIndex: zIndex}}>
       <header>Title</header>
@@ -8,3 +8,5 @@ const Dialog = ({ children }) => {
     </div>
   );
 }
+
+export default Dialog;

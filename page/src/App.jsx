@@ -1,5 +1,5 @@
 import './App.css';
-import AppMenu from './pages/AppMenu';
+import AppMenu from './components/AppMenu';
 import FloatTool from './components/FloatTool';
 import Logo from './components/Logo';
 
